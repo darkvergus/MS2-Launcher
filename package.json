@@ -1,0 +1,17 @@
+{
+  "name": "MS2-Launcher",
+  "productName": "MS2-Launcher",
+  "description": "MS2-Launcher developed for the discord community.",
+  "copyright": "Copyright © 2021 ${author}.",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.1",
+  "author": "Ed",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "13.2.1",
+    "electron-packager": "^15.3.0"
+  }
+}

@@ -1,0 +1,274 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+
+body {
+  overflow: hidden;
+  background: url("../Resources/Backgrounds/7.jpg") center no-repeat;
+  background-size: 100% 100%;
+  user-select: none;
+}
+
+#overlay {
+	background: url("../Resources/Overlay/1.png") center no-repeat;
+  display: block;
+  width: 1280px;
+  height: 768px;
+  mix-blend-mode: overlay;
+  position: absolute;
+  pointer-events: none;
+}
+
+#logo {
+  width: 125px; 
+  height: 75px; 
+  position: fixed; 
+  left: 10px; 
+  top: 10px; 
+}
+
+.stretch {
+  width: 80%;
+  height: 80%;
+}
+
+#header {
+	height: 75px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.75);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	align-self: stretch;
+	-webkit-app-region: drag;
+}
+
+.option {
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+	width: 50px;
+	height: 75px;
+}
+
+#close {
+	background: url("../Resources/Icons/close.png") center no-repeat;
+}
+
+#minimize {
+	background: url("../Resources/Icons/minimize.png") center no-repeat;
+}
+
+#close:hover {
+	background: url("../Resources/Icons/close-hover.png") center no-repeat;
+}
+
+#minimize:hover {
+	background: url("../Resources/Icons/minimize-hover.png") center no-repeat;
+}
+
+#sidebar {
+	height: 768px;
+	width: 75px;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+#sidebar .option {
+	display: block;
+	margin: 0px auto;
+	width: 40px;
+	height: 40px;
+}
+
+#sidebar img {
+	width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  background-size: 80%;
+}
+
+#sidebar .link {
+	margin-bottom: 5px;
+}
+
+#playButton {
+	width: 450px;
+	height: 120px;
+	display: block;
+	position: absolute;
+	right: 100px;
+	bottom: 100px;
+}
+
+#play {
+	background: url("../Resources/play-button.png") center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#play:hover {
+	background: url("../Resources/play-button-hover.png") center no-repeat;
+	cursor: pointer;
+}
+
+.wrap-collabsible {
+	position: absolute;
+  right: 125px;
+  bottom: 225px;
+  width: 400px;
+}
+
+.label-toggle {
+	display: block;
+  height: 40px;
+  width: 400px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: whitesmoke;
+  background: url("../Resources/list-bar.png") center no-repeat;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+#collapsible-toggle {
+	display: none;
+}
+
+.label-toggle::before {
+  content: ' ';
+  display: inline-block;
+  background: url("../Resources/Icons/Arrow.png") center no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: 80%;
+  vertical-align: middle;
+  transition: transform .2s ease-out;
+  float: right;
+}
+
+#collapsible-header {
+  position: absolute;
+  display: inline-flex;
+  width: 400px;
+  height: 40px;
+  top: 0;
+  left: 0;
+}
+
+#collapsible-title {
+	height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#ip-toggle {
+	display: none;
+}
+
+.show {
+	display: block !important;
+	background: rgba(0, 0, 0, 0.75);
+	width: 400px;
+	height: 40px;
+	top: -45px;
+	color: whitesmoke;
+	position: absolute;
+}
+
+.invalid {
+	color: red !important;
+}
+
+#ip {
+	height: 40px;
+  background: transparent;
+  width: 360px;
+  display: flex;
+  text-align: center;
+  float: left;
+  color: whitesmoke;
+}
+
+#send {
+	background: url("../Resources/Icons/send.png") center no-repeat;
+	display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-size: 80%;
+}
+
+#add {
+  width: 40px;
+  height: 40px;
+  background: url("../Resources/Icons/plus.png") center no-repeat;
+  background-size: 75%;
+  position: absolute;
+  right: 40px;
+}
+
+#content-inner {
+	max-height: 400px;
+}
+
+#collapsible-content #content-inner {
+  background: url("../Resources/list-box.png") center no-repeat;
+  color: whitesmoke;
+}
+
+#collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .label-toggle + #collapsible-content {
+  max-height: 400px;
+}
+
+.toggle:checked + .label-toggle::before {
+  transform: rotate(180deg);
+}
+#serverList {
+	display: block;
+	width: 400px;
+}
+
+.currentServer {
+	height: 40px;
+}
+
+.status {
+	width: 40px;
+	height: 40px;
+	background: url("../Resources/Icons/offline.png") center no-repeat;
+	float: left;
+}
+
+.server {
+  display: flex;
+  height: 40px;
+  width: 320px;
+  float: left;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete {
+	background: url("../Resources/Icons/delete.png") center no-repeat;
+	width: 40px;
+	height: 40px;
+	background-size: 80%;
+	float: left;
+}

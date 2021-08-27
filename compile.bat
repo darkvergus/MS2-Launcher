@@ -1,0 +1,1 @@
+electron-packager . MS2-Launcher --icon=icon.ico --platform=win32 --arch=x64 --overwrite --app-version=1.0.1 --build-version=2.0.0 --asar

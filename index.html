@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MS2-Launcher</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+	<div id="overlay"></div>
+	<div id="logo">
+		<img src="assets/resources/logo.png" class="stretch" alt="" />
+	</div>
+  <div id="header">
+		<header>
+			<div class="option" id="close"></div>
+			<div class="option" id="minimize"></div>
+		</header>
+	</div>
+	<div id="sidebar">
+		<a class="option link" id="github" href="https://github.com/AlanMorel/MapleServer2"><img src="assets/Resources/Icons/github.png" alt=""></a>
+		<a class="option link" id="discord" href="https://discord.com/invite/mABkFFhBuU"><img src="assets/Resources/Icons/discord-logo.png" alt=""></a>
+		<a class="option link" id="vs" href="https://visualstudio.microsoft.com/vs/preview/"><img src="assets/Resources/Icons/VS-logo.png" alt=""></a>
+	</div>
+	<div id="playButton">
+		<button type="button" id="play"></button>
+	</div>
+	<div class="wrap-collabsible">
+	  <input id="collapsible-toggle" class="toggle" type="checkbox">
+  	<label for="collapsible-toggle" class="label-toggle" tabindex="0">
+			<div id="collapsible-header">
+				<div id="ip-toggle">
+					<input type="text" placeholder="127.0.0.1:20010" id="ip">
+					<div id="send"></div>
+				</div>
+		  	<div class="status"></div>
+			  <div id="add"></div>
+		  </div>
+		  <div id="collapsible-title">Test</div>
+		</label>
+	  <div id="collapsible-content">
+	    <div id="content-inner">
+	    	<div id="serverList">
+	    		<div class="currentServer">
+    				<div class="status"></div>
+	    			<div class="server">127.0.0.1:20010</div>
+	    			<div class="delete"></div>
+	    		</div>
+	    	</div>
+	    </div>
+	  </div>
+	</div>
+	<script type="text/javascript" src="./assets/js/menuHandler.js"></script>
+</body>
+</html>
